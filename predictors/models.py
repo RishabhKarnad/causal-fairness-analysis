@@ -7,8 +7,13 @@ import pandas as pd
 from joblib import dump, load
 import os
 import numpy as np
+import pickle
+# set seed for sklearn
+np.random.seed(42)
+
 
 def model(train_df_path, test_df_path, model_type):
+    print(train_df_path, test_df_path, model_type)
     if(model_type=='LR'):
         clf = LogisticRegression()
     if(model_type=='mlp'):
@@ -57,6 +62,5 @@ def model(train_df_path, test_df_path, model_type):
     if(os.path.exists(f"./trained_models/{scm_type}/{data_type}" == False)):
         os.makedirs(f"./trained_models/{scm_type}/{data_type}", exist_ok=True)
     dump(clf, f'./trained_models/{scm_type}/{data_type}/{model_type}.joblib')
+    pickle.dump(clf, open(f"./trained_models/{scm_type}/{data_type}/{model_type}.pkl","wb"))
     return clf, accuracy_score(test_y, predictions), accuracy_score(y, train_predictions), f1_score(test_y, predictions), f1_score(y, train_predictions)
-
-
