@@ -7,6 +7,8 @@ from data.nonlinear import FairNonlinearGaussianSCM, UnfairNonlinearGaussianSCM
 from metrics.total_variation import tv
 from metrics.counterfactual import ctf_de, ctf_ie, ctf_se
 
+from data.generate import generate
+
 
 def evaluate(data, model):
     print(f'Evaluating {type(model).__name__}')
@@ -33,12 +35,10 @@ def main():
 
 
 if __name__ == '__main__':
-    for alpha in [0.0001, 0.001, 0.01, 0.1, 1]:
-        print(alpha)
-        print(FairGaussianSCM(alpha).sample_n(10))
-        print(UnfairGaussianSCM(alpha).sample_n(10))
-        print(FairNonlinearGaussianSCM(alpha).sample_n(10))
-        print(UnfairNonlinearGaussianSCM(alpha).sample_n(10))
-        print('===============')
+    print(FairGaussianSCM().sample_n(10))
+    print(UnfairGaussianSCM().sample_n(10))
+    print(FairNonlinearGaussianSCM().sample_n(10))
+    print(UnfairNonlinearGaussianSCM().sample_n(10))
+    print('===============')
 
-    main()
+    generate()

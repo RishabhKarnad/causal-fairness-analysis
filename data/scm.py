@@ -1,5 +1,7 @@
 import numpy as np
 
+from tqdm import tqdm
+
 
 class StandardModelSCM:
     def __init__(self, d_z=1, d_w=1):
@@ -22,4 +24,7 @@ class StandardModelSCM:
         raise NotImplementedError
 
     def sample_n(self, n_samples=1000):
-        return np.array([self.sample() for i in range(n_samples)])
+        samples = []
+        for i in tqdm(range(n_samples)):
+            samples.append(self.sample())
+        return np.array(samples)
