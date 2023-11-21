@@ -1,16 +1,16 @@
 +-------+--------+-----------+----------+----------+-------------------+-------------------+
 | Model |  SCM   |    Data   | Accuracy | F1 Score | Training Accuracy | Training F1 Score |
 +-------+--------+-----------+----------+----------+-------------------+-------------------+
-|   LR  | unfair | nonlinear | 0.76275  | 0.86541  |      0.76528      |      0.86703      |
-|  mlp  | unfair | nonlinear | 0.76275  | 0.86541  |      0.76528      |      0.86703      |
-|   dt  | unfair | nonlinear |   1.0    |   1.0    |        1.0        |        1.0        |
-|   LR  |  fair  | nonlinear | 0.70914  | 0.82982  |      0.70657      |      0.82806      |
-|  mlp  |  fair  | nonlinear | 0.70914  | 0.82982  |      0.70657      |      0.82806      |
-|   dt  |  fair  | nonlinear |  0.9996  | 0.99972  |        1.0        |        1.0        |
-|   LR  | unfair |   linear  | 0.97059  | 0.97025  |       0.9772      |      0.97696      |
-|  mlp  | unfair |   linear  |  0.5045  |   0.0    |      0.50565      |        0.0        |
-|   dt  | unfair |   linear  |  0.998   | 0.99798  |        1.0        |        1.0        |
-|   LR  |  fair  |   linear  | 0.95659  | 0.97036  |       0.9511      |      0.96663      |
-|  mlp  |  fair  |   linear  | 0.72434  | 0.84014  |      0.72497      |      0.84056      |
-|   dt  |  fair  |   linear  |   1.0    |   1.0    |        1.0        |        1.0        |
+|   Logistic Regression  |  fair  |   linear  | 0.95359  | 0.96864  |       0.9503      |       0.9659      |
+|   Decision Tree  |  fair  |   linear  |   1.0    |   1.0    |        1.0        |        1.0        |
+|  Neural Network  |  fair  |   linear  | 0.73275  | 0.84576  |      0.72177      |      0.83841      |
+|   Logistic Regression  | unfair |   linear  |   0.99   | 0.99353  |       0.9911      |      0.99424      |
+|   Decision Tree  | unfair |   linear  | 0.96419  | 0.97668  |        1.0        |        1.0        |
+|  Neural Network  | unfair |   linear  |   1.0    |   1.0    |       0.9995      |      0.99967      |
+|   Logistic Regression  |  fair  | nonlinear | 0.70354  | 0.82597  |      0.69857      |      0.82254      |
+|   Decision Tree  |  fair  | nonlinear |   1.0    |   1.0    |        1.0        |        1.0        |
+|  Neural Network  |  fair  | nonlinear | 0.70354  | 0.82597  |      0.69857      |      0.82254      |
+|   Logistic Regression  | unfair | nonlinear |  0.9982  | 0.99814  |       0.9992      |      0.99917      |
+|   Decision Tree  | unfair | nonlinear |  0.9824  | 0.98179  |        1.0        |        1.0        |
+|  Neural Network  | unfair | nonlinear |  0.5171  |   0.0    |      0.51695      |        0.0        |
 +-------+--------+-----------+----------+----------+-------------------+-------------------+
