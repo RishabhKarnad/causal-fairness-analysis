@@ -1,64 +1,28 @@
-fair linear dt
-dict_keys(['z', 'w', 'x'])
-dict_keys(['z', 'x', 'w'])
-fair linear LR
-dict_keys(['z', 'w', 'x'])
-dict_keys(['z', 'x', 'w'])
-fair linear dt
-dict_keys(['z', 'x', 'w'])
-dict_keys(['z', 'x', 'w'])
-fair linear mlp
-dict_keys(['z', 'x', 'w'])
-dict_keys(['z', 'x', 'w'])
-fair linear LR
-dict_keys(['w', 'z', 'x'])
-dict_keys(['z', 'x', 'w'])
-fair linear mlp
-dict_keys(['z', 'x', 'w'])
-dict_keys(['z', 'x', 'w'])
-fair nonlinear dt
-dict_keys(['x', 'w', 'z'])
-dict_keys(['z', 'x', 'w'])
-fair nonlinear LR
-dict_keys(['w', 'x', 'z'])
-dict_keys(['z', 'x', 'w'])
-fair nonlinear dt
-dict_keys(['x', 'z', 'w'])
-dict_keys(['z', 'x', 'w'])
-fair nonlinear mlp
-dict_keys(['z', 'x', 'w'])
-dict_keys(['z', 'x', 'w'])
-fair nonlinear LR
-dict_keys(['w', 'x', 'z'])
-dict_keys(['z', 'x', 'w'])
-fair nonlinear mlp
-dict_keys(['z', 'x', 'w'])
-dict_keys(['z', 'x', 'w'])
-unfair linear dt
-dict_keys(['z', 'w', 'x'])
-dict_keys(['z', 'x', 'w'])
-unfair linear LR
-dict_keys(['z', 'w', 'x'])
-dict_keys(['z', 'x', 'w'])
-unfair linear dt
-dict_keys(['z', 'w', 'x'])
-dict_keys(['z', 'x', 'w'])
-unfair linear mlp
-dict_keys(['x', 'z', 'w'])
-dict_keys(['z', 'x', 'w'])
-unfair linear LR
-dict_keys(['z', 'x', 'w'])
-dict_keys(['z', 'x', 'w'])
-unfair linear mlp
-dict_keys(['w', 'x', 'z'])
-dict_keys(['z', 'x', 'w'])
-unfair nonlinear dt
-dict_keys(['z', 'x', 'w'])
-dict_keys(['z', 'x', 'w'])
-unfair nonlinear LR
-dict_keys(['w', 'z', 'x'])
-dict_keys(['z', 'x', 'w'])
-unfair nonlinear dt
-dict_keys(['z', 'x', 'w'])
-dict_keys(['z', 'x', 'w'])
-unfair nonlinear mlp
++-------+--------+-----------+-----------------------+--------+--------+--------+
+| Model |  SCM   |    Data   | Explainability Method |   z    |   x    |   w    |
++-------+--------+-----------+-----------------------+--------+--------+--------+
+|   Linear Regression  |  fair  |   linear  |          LIME         | 0.6557 | 0.0685 | 0.2388 |
+|   Linear Regression  |  fair  |   linear  |          SHAP         | 0.5602 | 0.0601 | 0.2388 |
+|   Decision Tree  |  fair  |   linear  |          LIME         | 0.9906 | 0.0278 | 0.037  |
+|   Decision Tree  |  fair  |   linear  |          SHAP         |  0.73  |  0.0   |  0.0   |
+|  Neural Network  |  fair  |   linear  |          LIME         |  0.0   |  0.0   |  0.0   |
+|  Neural Network  |  fair  |   linear  |          SHAP         |  0.0   |  0.0   |  0.0   |
+|   Linear Regression  | unfair |   linear  |          LIME         | 0.362  | 0.395  | 0.3782 |
+|   Linear Regression  | unfair |   linear  |          SHAP         | 0.6107 | 0.7369 | 0.3874 |
+|   Decision Tree  | unfair |   linear  |          LIME         | 0.2826 | 0.5197 | 0.3226 |
+|   Decision Tree  | unfair |   linear  |          SHAP         | 0.5867 |  0.75  | 0.455  |
+|  Neural Network  | unfair |   linear  |          LIME         | 0.3303 | 0.4327 | 0.4382 |
+|  Neural Network  | unfair |   linear  |          SHAP         | 0.7836 | 0.7588 | 0.5553 |
+|   Linear Regression  |  fair  | nonlinear |          LIME         | 0.0008 | 0.0004 | 0.0139 |
+|   Linear Regression  |  fair  | nonlinear |          SHAP         |  0.0   |  0.0   | 0.0264 |
+|   Decision Tree  |  fair  | nonlinear |          LIME         | 0.9838 | 0.0327 | 0.0256 |
+|   Decision Tree  |  fair  | nonlinear |          SHAP         |  0.68  |  0.0   |  0.0   |
+|  Neural Network  |  fair  | nonlinear |          LIME         |  0.0   |  0.0   |  0.0   |
+|  Neural Network  |  fair  | nonlinear |          SHAP         |  0.0   |  0.0   |  0.0   |
+|   Linear Regression  | unfair | nonlinear |          LIME         | 0.1277 | 0.735  | 0.1224 |
+|   Linear Regression  | unfair | nonlinear |          SHAP         | 0.2456 | 0.6074 | 0.2991 |
+|   Decision Tree  | unfair | nonlinear |          LIME         | 0.1547 | 0.7764 | 0.1306 |
+|   Decision Tree  | unfair | nonlinear |          SHAP         | 0.4283 |  0.6   | 0.5583 |
+|  Neural Network  | unfair | nonlinear |          LIME         |  0.0   |  0.0   |  0.0   |
+|  Neural Network  | unfair | nonlinear |          SHAP         |  0.0   |  0.0   |  0.0   |
++-------+--------+-----------+-----------------------+--------+--------+--------+
